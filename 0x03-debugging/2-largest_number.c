@@ -24,6 +24,6 @@ int largest;
 	else
 	{
 		largest = c;
-	}	
+	}
 	return (largest);
 }
