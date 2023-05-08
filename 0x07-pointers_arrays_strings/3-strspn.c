@@ -2,15 +2,15 @@
 
 /**
  * _strspn - function that gets the length of a prefix substring
- * @s: pointer to the string to search
+ * @s: pointer to string to search
  * @accept: pointer to the string of characters to match
  *
- * Return: the number of bytes in the initial segment of s which consist only
- * of bytes from accept
+ * Return: bytes in prefix of substring from accept
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
+	unsigned int len = 0;
 	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				count++;
+				len++;
 				break;
 			}
 		}
@@ -27,5 +27,5 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 	}
 
-	return (count);
+	return (len);
 }
