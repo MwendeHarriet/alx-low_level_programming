@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints the chessboard
- * @a: matrix showing chessboard
+ * print_chessboard -function that prints the chessboard
+ * @a: 2d array representing chessboard
  *
  * Return: 0
  */
