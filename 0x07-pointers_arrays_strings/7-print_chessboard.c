@@ -1,8 +1,7 @@
 #include "main.h"
-
 /**
  * print_chessboard -function that prints the chessboard
- * @a: 2d array
+ * @a: array
  * Return: 0
  */
 
@@ -18,4 +17,3 @@ void print_chessboard(char (*a)[8])
 		_putchar('\n');
 	}
 }
-
