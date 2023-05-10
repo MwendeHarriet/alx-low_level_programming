@@ -30,7 +30,7 @@ int true_prime_number(int n, int m)
 	if (m == 1)
 		return (1);
 
-	if (m % i == 0 && m > 0)
+	if (m % m == 0 && m > 0)
 		return (0);
 
 	return (true_prime_number(n, m - 1));
