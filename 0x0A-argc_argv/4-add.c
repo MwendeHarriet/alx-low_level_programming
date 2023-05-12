@@ -27,12 +27,13 @@ int check_num(char *str)
 		return (1);
 	}
 	/**
-	 * main - prints name of programme
-	 * @argc: argument count
-	 * @argv: argument vector
-	 *
-	 * Return: Always 0
-	 */
+	* main -Entry point of the programme that
+	* prints the name of the programme
+	* @argc: argument count
+	* @argv: argument vector
+	*
+	* Return: 0
+	*/
 
 
 	int main(int argc, char *argv[])
@@ -44,8 +45,8 @@ int check_num(char *str)
 
 	count = 1;
 
-		while (count < argc) /*Goes through the whole array*/
-	{
+		while (count < argc) /*goes through the entire array*/
+		{
 			if (check_num(argv[count]))
 			{
 				str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
@@ -59,3 +60,6 @@ int check_num(char *str)
 			}
 			count++;
 		}
+		printf("%d\n", sum);
+		return (0);
+}
