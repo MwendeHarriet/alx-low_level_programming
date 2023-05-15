@@ -3,50 +3,45 @@
 #include "main.h"
 
 /**
- * _atoi - convert a string to an integer
- * @s: string to convert
- *
- * Return: the converted integer
- */
+* _atoi - convert a string to an integer
+* @s: string to convert
+*
+* Return: the converted integer
+*/
 int _atoi(char *s)
 {
-    int i, d, n, len, f, digit;
-    
-    i = 0;
-    d = 0;
-    n = 0;
-    len = 0;
-    f = 0;
-    digit = 0;
+	int a, b, c, d, digit, s_length;
 
-    while (s[len] != '\0')
-        len++;
+	a = 0;
+	b = 0;
+	c = 0;
+	d = 0;
+	digit = 0;
+	s_length = 0;
 
-    while (i < len && f == 0)
-    {
-        if (s[i] == '-')
-            ++d;
+	while (s[s_length] != '\0')
+	s_length++;
 
-        if (s[i] >= '0' && s[i] <= '9')
-        {
-            digit = s[i] - '0';
+	while (a < s_length && d == 0)
+	{
+		if (s[a] == '-')
+		++b;
 
-            if (d % 2)
-                digit = -digit;
+		if (s[a] >= '0' && s[a] <= '9')
+		{
+			digit = s[a] - '0';
 
-            n = n * 10 + digit;
-            f = 1;
+			if (d % 2)
+			digit = -digit;
 
-            if (s[i + 1] < '0' || s[i + 1] > '9')
-                break;
+			c = c * 10 + digit;
+			d = 1;
+		}
 
-            f = 0;
-        }
+	a++;
+	}
 
-        i++;
-    }
-
-    return (n);
+	return (c);
 }
 
 /**
@@ -59,18 +54,18 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-    int x, y, result;
+	int x, y, result;
 
-    if (argc != 3)
-    {
-        printf("%s\n", "Error");
-        return (1);
-    }
+	if (argc != 3)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
 
-    x = _atoi(argv[1]);
-    y = _atoi(argv[2]);
-    result = x * y;
+	x = _atoi(argv[1]);
+	y = _atoi(argv[2]);
+	result = x * y;
 
-    printf("%d\n", result);
-    return (0);
+	printf("%d\n", result);
+	return (0);
 }
