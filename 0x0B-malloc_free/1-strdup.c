@@ -3,28 +3,24 @@
 #include "main.h"
 
 /**
- * _strdup -duplicates a string to new memory space
- * description -returns pointer to d new string which is
- * a duplicate of str
- * @str: string to duplicate
+ * _strdup - duplicates a string to a new memory space.
+ * @str: the string to duplicate.
  *
- * return: returns pointer to duplicated string
- * or returns NULL on failure
+ * Return: returns a pointer to the duplicated string,
+ *         or NULL if memory allocation fails.
  */
-
 char *_strdup(char *str)
 {
 	if (str == NULL)
 	return (NULL);
+
 	int i = 0;
 	int j = 0;
 
 	while (str[i] != '\0')
-	i++;
+		i++;
 
-	char *s;
-
-	s = malloc(sizeof(char) * (i + 1));
+	char *s = malloc(sizeof(char) * (i + 1));
 
 	if (s == NULL)
 	return (NULL);
@@ -34,3 +30,4 @@ char *_strdup(char *str)
 
 	return (s);
 }
+
