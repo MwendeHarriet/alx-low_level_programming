@@ -28,10 +28,10 @@ char *str_concat(char *s1, char *s2)
 	while (s1[i] != '\0')
 		i++;
 
-	while (s2[ci] != '\0')
+	while (s2[j] != '\0')
 		j++;
 
-	c = malloc(sizeof(char) * (i + ci + 1));
+	c = malloc(sizeof(char) * (i + j + 1));
 
 	if (c == NULL)
 		return (NULL);
