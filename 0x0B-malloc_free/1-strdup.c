@@ -3,14 +3,15 @@
 #include "main.h"
 
 /**
- * _strdup -returns pointer to new memory space
- * description -returns pointer to duplicate of str
+ * _strdup -duplicates a string
+ * description -returns pointer to d new string which is
+ * a duplicate of str
  * @str: string to duplicate
  *
- * return: 0 or NULL for insufficient memory
+ * return: pointer to duplicate string or NULL for insufficient memory
  */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	if (str == NULL)
 	return (NULL);
