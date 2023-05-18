@@ -33,18 +33,17 @@ void *_memset(void *s, int b, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
 	char *p;
 
 	if (nmemb == 0 || size == 0)
-	return (NULL);
+		return (NULL);
 
-	p = malloc(nmemb * size);
+	p = malloc(size * nmemb);
 
 	if (p == NULL)
 		return (NULL);
 
-	_memset(p, 0, nmemb * size);
+	_memset(ptr, 0, nmemb * size);
 
 	return (p);
 }
