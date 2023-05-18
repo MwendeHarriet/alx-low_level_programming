@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- * malloc_checked -allocates memory using malloc
- *@b: number of bytes
- * return: on success retuns a pointer to allocated memory
- *
+ **malloc_checked -allocates memory using malloc
+ *description - allocates memory using malloc
+ *@b: memory size
+ *Return: * Return: On success, returns a pointer to the allocated memory
+ *On failure, exits the program with a status value of 98
  */
 
 void *malloc_checked(unsigned int b)
