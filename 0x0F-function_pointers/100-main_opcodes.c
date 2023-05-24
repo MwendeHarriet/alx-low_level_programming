@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-    n_of_bytes = atoi(argv[1]);
+	n_of_bytes = atoi(argv[1]);
 
 	if (n_of_bytes < 0)
 	{
