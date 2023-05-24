@@ -7,7 +7,7 @@
 *description -prints a name
 *@name: string of characters
 *@f: pointer to function
-*(char *): specifies type of parameter
+*
 *Return: nothing
 */
 
