@@ -8,13 +8,13 @@
 *@name: string of characters
 *@f: pointer to function
 *
-*Return: nothing
+*Return: void
 */
 
 void print_name(char *name, void (*f)(char *))
 {
 	if (name == NULL || f == NULL)
-		return;
+		return (void);
 
 	f(name);
 }
