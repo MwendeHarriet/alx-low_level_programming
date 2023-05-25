@@ -5,36 +5,33 @@
 /**
 *print_all -prints values of different types based on given format
 *@format: string specifying types of arguments passed to function
- */
+*/
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int i;
 	char *str;
-	char *sep;
 	char *sep = "";
 
-	va_list l_params;
+	va_list values;
 
-	va_start(l_params, format);
+	va_start(values, format);
 
-	if (format)
-	{
 		while (format[i])
 		{
 			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", sep, va_arg(l_params, int));
+					printf("%s%c", sep, va_arg(values, int));
 					break;
 				case 'i':
-					printf("%s%d", sep, va_arg(l_params, int));
+					printf("%s%d", sep, va_arg(values, int));
 					break;
 				case 'f':
-					printf("%s%f", sep, va_arg(l_params, double));
+					printf("%s%f", sep, va_arg(values, double));
 					break;
 				case 's':
-					str = va_arg(l_params, char *);
+					str = va_arg(values, char *);
 					if (!str)
 						str = "(nil)";
 					printf("%s%s", sep, str);
@@ -47,6 +44,8 @@ void print_all(const char * const format, ...)
 			i++;
 		}
 	}
+	va_end(values);
+
 	printf("\n");
-	va_end(l_params);
 }
+
