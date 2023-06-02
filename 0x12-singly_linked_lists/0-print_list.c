@@ -9,8 +9,6 @@
 
 size_t print_list(const list_t *h)
 {
-	int *temp = 0;
-
 	size_t temp = 0;
 
 	while (h != NULL)
