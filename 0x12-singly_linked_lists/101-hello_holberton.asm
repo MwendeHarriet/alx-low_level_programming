@@ -1,13 +1,10 @@
-section .data
-	message db 'Hello, Holberton', 10, 0
-
-section .text
-	extern printf
-	global main
-
+	global   main
+	  extern    printf
 main:
-	push message
-	call printf
-	add esp, 4
-	xor eax, eax
-	ret
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov   eax, 0
+	  ret
+format: db `Hello, Holberton\n`,0
+
