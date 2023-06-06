@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * list_len -returns number of elemnts in string
+ * listint_len -returns number of elements in string
  * @h: head
  *
- * Return: elements in h
+ * Return: number of nodes
  */
 
-size_t listint_len(const listint_t *h);
+size_t listint_len(const listint_t *h)
 {
 	size_t temp = 0;
 
