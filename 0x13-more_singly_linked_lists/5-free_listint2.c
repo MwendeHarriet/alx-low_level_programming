@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_list -frees list
+ * free_listint2 -frees list
  * @head: head
  * Return: nothing
  */
