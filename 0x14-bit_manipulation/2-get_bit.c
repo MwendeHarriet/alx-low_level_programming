@@ -4,7 +4,8 @@
  * get_bit -returns value of bit at given index
  * @n: input
  * @index: index of bit to retrieve
- * Return: value of bit
+ * Return: value of bit or -1 if error
+ * occurred
  */
 
 int get_bit(unsigned long int n, unsigned int index)
