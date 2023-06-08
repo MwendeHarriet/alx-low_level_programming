@@ -10,11 +10,12 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long binary_num = 1UL << index;
+	int binary_num;
 
-	if ((n & binary_num) != 0)
-		return (1);
+	if (index > 63)
+		return (-1);
 
-	else
-		return (0);
+	binary_num = (n >> index) & 1;
+
+	return (binary_num);
 }
