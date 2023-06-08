@@ -4,7 +4,7 @@
  * clear_bit -sets value of given bit to 0
  * @n: input
  * @index: index of bit
- * REturn: 1 if it worked or -1 if an error occurred
+ * Return: value of bit or -1 if an error occurred
  */
 
 int clear_bit(unsigned long int *n, unsigned int index)
