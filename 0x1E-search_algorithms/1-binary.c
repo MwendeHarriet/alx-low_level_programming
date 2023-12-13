@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
+
 /**
  * binary_search - binary search function
  * @array: pointer to first element of to search in
@@ -11,19 +12,19 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
-
 	size_t j = size - 1;
-
 	size_t k, l;
 
 	if (array == NULL)
 		return (-1);
-	while (l <= j)
+
+	while (i <= j)
 	{
 		printf("Searching in array: %d", array[i]);
 		for (l = i + 1; l <= j; l++)
-			printf(", %d", array[i]);
+			printf(", %d", array[l]);
 		printf("\n");
+
 		k = (i + j) / 2;
 		if (array[k] == value)
 			return (k);
@@ -32,5 +33,6 @@ int binary_search(int *array, size_t size, int value)
 		else
 			i = k + 1;
 	}
+
 	return (-1);
 }
